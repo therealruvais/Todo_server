@@ -32,12 +32,13 @@ app.use(cookieParser());
 app.use("/api/user", authRoute);
 app.use("/api/task", taskRoute);
 
+app.get("/", (req, res) => {
+  res.send("hello");
+  });
+
 app.use(notFound);
 app.use(errorHandler);
 
-app.get("/", (req, res) => {
-  res.send("hello");
-});
 
 const start = async () => {
   try {
