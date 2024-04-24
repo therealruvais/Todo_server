@@ -34,9 +34,9 @@ app.use("/api/task", taskRoute);
 app.use(notFound);
 app.use(errorHandler);
 
-// app.get("/", (req, res) => {
-//   res.send("helo");
-// });
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 
 const start = async () => {
   try {
